@@ -1,0 +1,137 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: roboto;
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+body{
+    font-size: 16px;
+    font-family: roboto;
+    background-color: hsl(235, 18%, 26%);
+    padding: 20px;
+}
+.dissable{
+    display: none;
+}
+.container{
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+.image-content{
+    width: 100%;
+    overflow: hidden;
+}
+.image-content .image{
+    width: 100%;
+    content: url(assets/images/illustration-sign-up-mobile.svg);
+    object-fit: cover;
+    object-position: center;
+}
+.sign-up{
+    padding: 20px;
+}
+.sign-up h1{
+    font-weight: 700;
+color: hsl(235, 18%, 26%);
+font-size: 2.2rem;
+margin-bottom: 20px;
+}
+.sign-up p{
+    color: hsl(234, 29%, 20%);
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+ul{
+    list-style: none;
+}
+ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    color: hsl(234, 29%, 20%);
+
+}
+ul li span{
+    margin-right: 5px;
+}
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.form input{
+    width: 100%;
+    height: 45px;
+    border-radius: 3px;
+    border: 1px solid hsl(231, 7%, 60%);
+    color: hsl(231, 7%, 60%);
+    padding-left: 10px;
+    outline: none;
+}
+.form button{
+    background-color: hsl(234, 29%, 20%); 
+    border: none;
+    height: 45px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+}
+.form button:hover{
+    background: linear-gradient(45deg,hsl(4, 100%, 67%),hsl(24, 100%, 67%));
+}
+
+@media(min-width:768px){
+    .container{ 
+        width: 85%;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 30px;
+       
+    }
+    .image-content{
+        flex: 1;
+    }
+    .image-content .image{
+        content: url(assets/images/illustration-sign-up-desktop.svg);
+    }
+    .sign-up{
+        flex: 1;
+        padding-top: 50px;
+    }
+    .sign-up h1{
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    .sign-up p{
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+    .sign-up ul{
+        padding: 20px 0px;
+    }
+    .sign-up ul li{
+        margin-bottom: 20px;
+    }
+    .sign-up .form{
+        gap: 20px;
+    }
+    .sign-up .form label{
+        color: hsl(234, 29%, 20%);
+    }
+    .form input{
+        margin-bottom: 20px;
+    }
+}
